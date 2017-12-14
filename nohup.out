@@ -1,0 +1,24 @@
+[I 05:23:46.038 NotebookApp] Serving notebooks from local directory: /home/ubuntu/dog-project
+[I 05:23:46.038 NotebookApp] 0 active kernels
+[I 05:23:46.038 NotebookApp] The Jupyter Notebook is running at:
+[I 05:23:46.038 NotebookApp] http://0.0.0.0:8888/?token=adbe4cc7afd182e4b28ed1b3302eacda136edc96aaa59d79
+[I 05:23:46.038 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 05:23:46.039 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://0.0.0.0:8888/?token=adbe4cc7afd182e4b28ed1b3302eacda136edc96aaa59d79
+[I 05:24:28.063 NotebookApp] 302 GET /?token=adbe4cc7afd182e4b28ed1b3302eacda136edc96aaa59d79 (68.204.7.55) 0.54ms
+[I 05:24:34.416 NotebookApp] Kernel started: fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
+[I 05:24:34.445 NotebookApp] 302 GET /notebooks/images/Brittany_02625.jpg (68.204.7.55) 1.85ms
+[I 05:24:34.446 NotebookApp] 302 GET /notebooks/images/sample_dog_output.png (68.204.7.55) 1.04ms
+[I 05:24:34.448 NotebookApp] 302 GET /notebooks/images/Welsh_springer_spaniel_08203.jpg (68.204.7.55) 1.02ms
+[I 05:24:34.458 NotebookApp] 302 GET /notebooks/images/Curly-coated_retriever_03896.jpg (68.204.7.55) 1.01ms
+[I 05:24:34.503 NotebookApp] 302 GET /notebooks/images/American_water_spaniel_00648.jpg (68.204.7.55) 1.33ms
+[I 05:24:34.817 NotebookApp] 302 GET /notebooks/images/Labrador_retriever_06457.jpg (68.204.7.55) 0.93ms
+[I 05:24:34.905 NotebookApp] 302 GET /notebooks/images/Labrador_retriever_06455.jpg (68.204.7.55) 0.70ms
+[I 05:24:34.906 NotebookApp] 302 GET /notebooks/images/Labrador_retriever_06449.jpg (68.204.7.55) 0.61ms
+[I 05:24:34.971 NotebookApp] 302 GET /notebooks/images/sample_cnn.png (68.204.7.55) 1.12ms
+[I 05:24:34.973 NotebookApp] 302 GET /notebooks/images/sample_human_output.png (68.204.7.55) 0.86ms
+[I 05:24:35.109 NotebookApp] Adapting to protocol v5.1 for kernel fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
+[I 05:26:35.158 NotebookApp] Saving file at /dog_app.ipynb
