@@ -22,3 +22,68 @@
 [I 05:24:34.973 NotebookApp] 302 GET /notebooks/images/sample_human_output.png (68.204.7.55) 0.86ms
 [I 05:24:35.109 NotebookApp] Adapting to protocol v5.1 for kernel fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
 [I 05:26:35.158 NotebookApp] Saving file at /dog_app.ipynb
+[I 05:58:58.161 NotebookApp] Saving file at /dog_app.ipynb
+[I 06:06:59.581 NotebookApp] Saving file at /dog_app.ipynb
+[I 06:10:59.306 NotebookApp] Saving file at /dog_app.ipynb
+2017-12-14 06:14:41.367391: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-14 06:14:41.367447: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-14 06:14:41.367454: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-14 06:14:41.367459: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-14 06:14:41.367464: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-14 06:14:41.486848: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-12-14 06:14:41.487337: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 0 with properties: 
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:00:1e.0
+Total memory: 11.17GiB
+Free memory: 11.04GiB
+2017-12-14 06:14:41.487356: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
+2017-12-14 06:14:41.487362: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
+2017-12-14 06:14:41.487371: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0)
+[I 06:14:58.902 NotebookApp] Saving file at /dog_app.ipynb
+[I 06:18:58.976 NotebookApp] Saving file at /dog_app.ipynb
+[W 06:31:05.109 NotebookApp] WebSocket ping timeout after 119615 ms.
+[I 07:32:10.472 NotebookApp] Adapting to protocol v5.1 for kernel fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
+[W 07:36:10.473 NotebookApp] WebSocket ping timeout after 119853 ms.
+[I 12:57:11.293 NotebookApp] Adapting to protocol v5.1 for kernel fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
+[W 13:11:11.293 NotebookApp] WebSocket ping timeout after 119897 ms.
+[I 14:04:21.242 NotebookApp] Adapting to protocol v5.1 for kernel fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
+[W 14:25:51.245 NotebookApp] WebSocket ping timeout after 119965 ms.
+[I 15:36:57.661 NotebookApp] Adapting to protocol v5.1 for kernel fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
+[W 17:06:57.663 NotebookApp] WebSocket ping timeout after 119812 ms.
+[I 17:20:19.967 NotebookApp] Adapting to protocol v5.1 for kernel fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
+[W 20:11:19.968 NotebookApp] WebSocket ping timeout after 119759 ms.
+[I 21:47:48.677 NotebookApp] Adapting to protocol v5.1 for kernel fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
+[C 23:50:24.852 NotebookApp] received signal 15, stopping
+[I 23:50:24.853 NotebookApp] Shutting down 1 kernel
+[I 23:50:24.954 NotebookApp] Kernel shutdown: fa4efa5d-5a7a-4d4a-aa8d-720dbdfb77e1
+[I 03:23:38.818 NotebookApp] Writing notebook server cookie secret to /run/user/1000/jupyter/notebook_cookie_secret
+[I 03:23:39.649 NotebookApp] Serving notebooks from local directory: /home/ubuntu/dog-project
+[I 03:23:39.649 NotebookApp] 0 active kernels
+[I 03:23:39.649 NotebookApp] The Jupyter Notebook is running at:
+[I 03:23:39.649 NotebookApp] http://0.0.0.0:8888/?token=9889129018c2e0a7358ed3a4a04e27c88d179701f41e765d
+[I 03:23:39.649 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 03:23:39.650 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://0.0.0.0:8888/?token=9889129018c2e0a7358ed3a4a04e27c88d179701f41e765d
+[I 03:24:11.323 NotebookApp] 302 GET /?token=9889129018c2e0a7358ed3a4a04e27c88d179701f41e765d (68.204.7.55) 0.63ms
+[I 03:24:17.520 NotebookApp] Kernel started: e5335c97-23f3-4bcb-82de-a2cd04fc0cca
+[I 03:24:17.548 NotebookApp] 302 GET /notebooks/images/Brittany_02625.jpg (68.204.7.55) 1.63ms
+[I 03:24:17.549 NotebookApp] 302 GET /notebooks/images/sample_dog_output.png (68.204.7.55) 0.67ms
+[I 03:24:17.550 NotebookApp] 302 GET /notebooks/images/Welsh_springer_spaniel_08203.jpg (68.204.7.55) 0.64ms
+[I 03:24:17.559 NotebookApp] 302 GET /notebooks/images/American_water_spaniel_00648.jpg (68.204.7.55) 1.57ms
+[I 03:24:17.561 NotebookApp] 302 GET /notebooks/images/Curly-coated_retriever_03896.jpg (68.204.7.55) 0.99ms
+[I 03:24:17.830 NotebookApp] 302 GET /notebooks/images/Labrador_retriever_06457.jpg (68.204.7.55) 1.47ms
+[I 03:24:17.851 NotebookApp] 302 GET /notebooks/images/Labrador_retriever_06455.jpg (68.204.7.55) 1.00ms
+[I 03:24:18.043 NotebookApp] 302 GET /notebooks/images/Labrador_retriever_06449.jpg (68.204.7.55) 1.08ms
+[I 03:24:18.053 NotebookApp] 302 GET /notebooks/images/sample_cnn.png (68.204.7.55) 0.99ms
+[I 03:24:18.075 NotebookApp] 302 GET /notebooks/images/sample_human_output.png (68.204.7.55) 1.38ms
+[I 03:24:18.313 NotebookApp] Adapting to protocol v5.1 for kernel e5335c97-23f3-4bcb-82de-a2cd04fc0cca
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.8.0 locally
+[I 03:26:18.055 NotebookApp] Saving file at /dog_app.ipynb
