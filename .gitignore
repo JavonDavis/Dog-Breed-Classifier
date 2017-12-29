@@ -12,3 +12,5 @@ __MACOSX
 __pycache__
 *.pyc
 uploads/
+dog-classifier-env/
+.idea/
