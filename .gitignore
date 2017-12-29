@@ -8,3 +8,6 @@ bottleneck_features/DogVGG16Data.npz
 *.zip
 *.out
 *.npz
+__MACOSX
+__pycache__
+*.pyc
