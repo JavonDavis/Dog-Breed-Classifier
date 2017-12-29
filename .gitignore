@@ -11,3 +11,4 @@ bottleneck_features/DogVGG16Data.npz
 __MACOSX
 __pycache__
 *.pyc
+uploads/
