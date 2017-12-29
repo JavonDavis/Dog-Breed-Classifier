@@ -13,6 +13,18 @@ app.config['UPLOAD_FOLDER'] = '/Users/javon/Projects/Dog-Breed-Classifier/upload
 app.config['MAX_CONTENT_PATH'] = 50 * 1024 * 24  # 50MB
 
 
+from keras.models import model_from_json
+
+# load json and create model
+json_file = open('models/model.json', 'r')
+loaded_model_json = json_file.read()
+json_file.close()
+dog_breed_model = model_from_json(loaded_model_json)
+# load weights into new model
+dog_breed_model.load_weights("models/model-weights.h5")
+print("Loaded model from disk")
+
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -39,6 +51,7 @@ def home():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            print(filename)
             return redirect(url_for('uploaded_file',
                                     filename=filename))
     return render_template('main.html')
@@ -46,4 +59,6 @@ def home():
 
 @app.route('/results/<filename>')
 def uploaded_file(filename):
+    print('yes')
+    # result = detector(dog_breed_model, app.config['UPLOAD_FOLDER'] + '/' + filename)
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
