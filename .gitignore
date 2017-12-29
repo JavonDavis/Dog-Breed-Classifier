@@ -14,3 +14,4 @@ __pycache__
 uploads/
 dog-classifier-env/
 .idea/
+face_classifier.pkl
