@@ -1,9 +1,5 @@
 // common variables
-var iBytesUploaded = 0;
-var iBytesTotal = 0;
-var iPreviousBytesLoaded = 0;
-var iMaxFilesize = 1048576; // 1MB
-var oTimer = 0;
+var iMaxFilesize = 50 * 1024 * 1024; // 50MB
 var sResultFileSize = '';
 
 
@@ -21,7 +17,6 @@ function fileSelected() {
     document.getElementById('error').style.display = 'none';
     document.getElementById('error2').style.display = 'none';
     document.getElementById('abort').style.display = 'none';
-    document.getElementById('warnsize').style.display = 'none';
 
     // get selected file element
     var oFile = document.getElementById('image_file').files[0];
@@ -30,12 +25,6 @@ function fileSelected() {
     var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
     if (! rFilter.test(oFile.type)) {
         document.getElementById('error').style.display = 'block';
-        return;
-    }
-
-    // little test for filesize
-    if (oFile.size > iMaxFilesize) {
-        document.getElementById('warnsize').style.display = 'block';
         return;
     }
 

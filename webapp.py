@@ -13,7 +13,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 app.secret_key = 'doggyclassy'
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['MAX_CONTENT_PATH'] = 50 * 1024 * 24  # 50MB
+app.config['MAX_CONTENT_PATH'] = 50 * 1024 * 1024  # 50MB
 
 
 def allowed_file(filename):
@@ -23,7 +23,7 @@ def allowed_file(filename):
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Please navigate to /home'
 
 
 @app.route('/home', methods=['GET', 'POST'])
