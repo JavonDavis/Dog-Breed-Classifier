@@ -18,9 +18,8 @@ dog_breed_model = model_from_json(loaded_model_json)
 dog_breed_model.load_weights("models/model-weights.h5")
 print("Loaded model from disk")
 
-# Causes Memory Error on non-GPU instance
-# clf = joblib.load('models/face_classifier.pkl')
-# print("Loaded classifier from disk")
+clf = joblib.load('models/face_classifier.pkl')
+print("Loaded classifier from disk")
 
 # define ResNet50 model
 ResNet50_model = ResNet50(weights='imagenet')
@@ -58,18 +57,17 @@ def dog_detector(img_path):
     return (prediction <= 268) & (prediction >= 151)
 
 
-# Memory error when trying to use SVM on non-GPU instance
-# def face_detector(img_path):
-#     data = paths_to_tensor([img_path]).astype('float32') / 255.
-#     data = data.reshape((1, -1))
-#     return clf.predict(data)[0]
+def face_detector(img_path):
+    data = paths_to_tensor([img_path]).astype('float32') / 255.
+    data = data.reshape((1, -1))
+    return clf.predict(data)[0]
 
 # Use OpenCV Face detector
-def face_detector(img_path):
-    img = cv2.imread(img_path)
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray)
-    return len(faces) > 0
+# def face_detector(img_path):
+#     img = cv2.imread(img_path)
+#     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+#     faces = face_cascade.detectMultiScale(gray)
+#     return len(faces) > 0
 
 
 def get_breed(predicted_vector):
