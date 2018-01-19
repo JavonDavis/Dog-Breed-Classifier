@@ -23,7 +23,7 @@ The pipeline was then used then used to build a flask application that demonstra
 ## Getting Started 
 To execute the Flask app you need to do the following steps.
 
-* Install the requirements in the requirements/requirements.txt file. 
+* Install the requirements in the requirements/requirements.txt file using pip. 
 * export FLASK_APP=webapp.py from the root dir
 * flask run
 
