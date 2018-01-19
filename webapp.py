@@ -47,13 +47,34 @@ def home():
                                     filename=filename))
     return render_template('main.html')
 
+@app.route('/api/classify', methods=['POST'])
+def api():
+    result, error = None, None
+    # check if the post request has the file part
+    if 'image_file' not in request.files:
+        error = 'No image_file parameter'
+    else:
+        file = request.files['image_file']
+        # if user does not select file, browser also
+        # submit a empty part without filename
+        if file.filename == '':
+            error = 'Filename is empty'
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        if not error:
+            full_path = app.config['UPLOAD_FOLDER'] + '/' + file.filename
+            result = classify_breed(full_path)
+            print(result)
+    return str({'error': error, 'result': result})
+
 
 @app.route('/results/<filename>')
 def classify_image(filename):
     full_path = app.config['UPLOAD_FOLDER'] + '/' + filename
     result = classify_breed(full_path)
     print(result)
-    return render_template('results.html', filename=full_path, classification_result=result)
+    return render_template('results.html', filename=full_path, classification_result=result['message'])
 
 
 @app.route('/results/uploads/<filename>')

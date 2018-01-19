@@ -26,11 +26,6 @@ ResNet50_model = ResNet50(weights='imagenet')
 
 dog_names = tuple(open('dog_names.txt', 'r'))
 
-# extract pre-trained face detector
-face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
-
-print("Extracted face classifier")
-
 
 def path_to_tensor(img_path):
     # loads RGB image as PIL.Image.Image type
@@ -62,7 +57,12 @@ def face_detector(img_path):
     data = data.reshape((1, -1))
     return clf.predict(data)[0]
 
-# Use OpenCV Face detector
+# OpenCV Face detector
+# extract pre-trained face detector
+# face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
+
+# print("Extracted face classifier")
+
 # def face_detector(img_path):
 #     img = cv2.imread(img_path)
 #     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -76,9 +76,11 @@ def get_breed(predicted_vector):
     k = 5
     topk = predicted_vector.argsort()[-k:][::-1]
     results = []
+    classification_data = {}
     for pred in topk:
-        percentage = predicted_vector[pred] / 1 * 100
-        dog_name = dog_names[pred].replace('_', ' ')
+        percentage = predicted_vector[pred] * 100
+        dog_name = dog_names[pred].replace('_', ' ').strip()
+        classification_data[dog_name] = predicted_vector[pred]
         results.append((dog_name, percentage))
         print('{} - {}'.format(dog_name, percentage))
     print('-' * 10)
@@ -92,9 +94,9 @@ def get_breed(predicted_vector):
     disparity = get_percentage(results[0]) - get_percentage(results[1])
 
     if disparity > threshold:  # if you're at least sure as the defined threshold
-        return [get_name(results[0])]
+        return [get_name(results[0])], classification_data
     else:
-        return [get_name(results[0]), get_name(results[1])]
+        return [get_name(results[0]), get_name(results[1])], classification_data
 
 
 def InceptionV3_predict_breed(img_path):
@@ -104,15 +106,17 @@ def InceptionV3_predict_breed(img_path):
 
 
 def classify_breed(img_path):
-    breed = InceptionV3_predict_breed(img_path)
+    breed, classification_data = InceptionV3_predict_breed(img_path)
+    is_face = False
     if len(breed) == 1:
         formatted_message = breed[0]
     else:
         formatted_message = 'mixture of {} and {}'.format(breed[0], breed[1])
     if face_detector(img_path):
+        is_face = True
         message = 'This face looks like a.... {}'.format(formatted_message)
     elif dog_detector(img_path):
         message = 'The dog breed is a.... {}'.format(formatted_message)
     else:
         message = 'I don\'t know what this is but it looks like a {}'.format(formatted_message)
-    return message
+    return {'message': message.strip(), 'breed': breed, 'data': classification_data, 'face': is_face}
