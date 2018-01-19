@@ -7,6 +7,7 @@ import os
 
 app = Flask(__name__)
 app.debug = True
+app.static_folder = 'static'
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
