@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect, send_from_directory, url_for
+from flask import Flask, render_template, request, flash, redirect, send_from_directory, url_for, jsonify
 from werkzeug.utils import secure_filename
 from detector import classify_breed
 import os
@@ -66,7 +66,7 @@ def api():
             full_path = app.config['UPLOAD_FOLDER'] + '/' + file.filename
             result = classify_breed(full_path)
             print(result)
-    return str({'error': error, 'result': result})
+    return jsonify({'error': error, 'result': result})
 
 
 @app.route('/results/<filename>')
