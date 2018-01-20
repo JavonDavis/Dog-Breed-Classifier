@@ -80,7 +80,7 @@ def get_breed(predicted_vector):
     for pred in topk:
         percentage = predicted_vector[pred] * 100
         dog_name = dog_names[pred].replace('_', ' ').strip()
-        classification_data[dog_name] = predicted_vector[pred]
+        classification_data[dog_name] = float(predicted_vector[pred])
         results.append((dog_name, percentage))
         print('{} - {}'.format(dog_name, percentage))
     print('-' * 10)
