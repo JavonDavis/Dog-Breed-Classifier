@@ -1,3 +1,4 @@
+*.sock
 .DS_Store
 dogImages/
 lfw/
